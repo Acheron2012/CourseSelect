@@ -5,11 +5,9 @@ class HomesController < ApplicationController
   
   def showdata
     @course=Course.all
-    # json_str = "{ 'age':'Bill' , 'haha':'Gates'}" 
     respond_to do |format|
       format.json { render :json => @course }
     end
-    
     # render json=>json_str, status=>"200 ok"
   end
   
